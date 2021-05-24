@@ -1,0 +1,17 @@
+<div class="todo-card">
+  <h3 [ngClass]="{ strike: !todos.isActive }">{{ todos.title }}</h3>
+  <h5 [ngClass]="{ strike: !todos.isActive }">{{ todos.desc }}</h5>
+  <div>
+    <label
+      ><input
+        type="checkbox"
+        (click)="done(todos.id)"
+        [checked]="!todos.isActive"
+      />
+      Done</label
+    >
+  </div>
+  <button mat-raised-button color="warn" (click)="delete(todos.id)">
+    Delete
+  </button>
+</div>

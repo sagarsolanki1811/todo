@@ -1,0 +1,12 @@
+<div class="todo">
+  <h2>My TODOs</h2>
+  <div class="todos">
+    <div *ngFor="let item of data">
+      <app-todo-details
+        [todos]="item"
+        (deleteId)="delete($event)"
+        (doneId)="done($event)"
+      ></app-todo-details>
+    </div>
+  </div>
+</div>
